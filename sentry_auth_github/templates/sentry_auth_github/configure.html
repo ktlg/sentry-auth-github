@@ -1,3 +1,8 @@
 <h3>Organization</h3>
 
-<p>Users will be allowed to authenticate if they are a member of the <strong>{{ provider.org.name }}</strong> organization.</p>
+<p>Users will be allowed to authenticate if they are a member of these organizations:</p>
+<ul>
+{% for org in provider.org.name %}
+    <li>{{ org }}</li>
+{% endfor %}
+</ul>
